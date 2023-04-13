@@ -1,3 +1,51 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../google-fonts/") format("woff2"),
+    url("../google-fonts/") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../google-fonts/") format("woff2"),
+    url("../google-fonts/") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../google-fonts/") format("woff2"),
+    url("../google-fonts/") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../google-fonts/") format("woff2"),
+    url("../google-fonts/") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* REPE-COLORS */
+:root{
+    --body-color:#f1f4ff;
+    --repeat-color:#F03535;
+    --green-button:#4DC490;
+    --blue-button:#655AF2;
+    --text-color:#000;
+}
+
+
+
 html{
     height: 100%;
     box-sizing: border-box;
@@ -10,17 +58,21 @@ html{
     box-sizing: inherit;
 }
 
+:focus{
+    outline: 1px dashed skyblue;
+}
+
 body{
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family:"Arial", sans-serif;
+    font-family:"Inter","Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
 img{
@@ -32,16 +84,175 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1192px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-
+    
 }
 
 
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
+
+.wrappers{
+    display: flex;
+}
+
+
+/* HERO */
+.card {
+    display: flex;
+    margin-right: 12px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    background-image: url(../img/img.bg.jpg);
+    background-repeat: no-repeat;
+}
+.hero-top {
+    flex-grow: 1;
+    padding: 55px 60px 0 60px;
+}
+.hero-submit {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 5px 15px;
+    border-radius: 41px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid  #FFFFFF;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+
+}
+.hero-heading {
+    width: 570px;
+    font-size: 36px;
+    font-family: "Inter","Arial",sans-serif;
+    line-height: 46px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.hero-text {
+    width: 347px;
+    font-size: 16px;
+    font-family: "Inter","Arial",sans-serif;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 165px;
+}
+.hero-bottom {
+    font-size: 19px;
+    font-family: "Inter","Arial",sans-serif;
+    line-height: 23px;
+    text-align: center;
+    padding: 29px 145px;
+    background-color: var(--green-button);
+    border-radius: 0px 0px 20px 20px;
+    color: #fff;
+}
+
+
+/* INPUT-CARD */
+.input-card {
+    width: 570px;
+    padding: 55px 60px 40px 60px ;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.input-card-hero-heading {
+    margin-top: 0;
+    margin-bottom: 79px;
+    width: 428px;
+    font-size: 32px;
+    font-family: "Inter","Arial",sans-serif;
+    line-height: 42px;
+    font-weight: 600;
+}
+
+
+.input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    font-family: "Inter","Arial",sans-serif;
+
+}
+.input:active{
+    border: none;
+    color: #000;
+}
+
+
+.input:not(:last-child){
+    margin-bottom: 35px;
+}
+
+.button-button {
+    margin-top: 28px;
+    width: 450px;
+    height: 59px;
+    border-radius: 10px;
+    background-color: #655AF2;
+    border: none;
+
+}
+
+.button-button:hover{
+    background-color: #3A2BF8;
+}
+.button-button:active{
+    opacity: 0.6;
+}
+.button {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Inter","Arial",sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 20px 149px;
+    
+}
+
+.bottom-text {
+    font-size: 11px;
+    line-height: 15px;
+    color: #555;
+    text-align: center;
+}
+.bottom-link {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--repeat-color);
+}
+
+
+/* RETINA */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+.hero{
+    background-image: url(../img/img.bg@2x.jpg);
+}
+}
+
+
